@@ -3,7 +3,8 @@
 
  🕹️🕹️🕹️ Generation Jam - version 2 🕹️🕹️🕹️
 
-# Welcome to the video game for the jam version 2 of Generation - Theme: Survive
+# Welcome to the video game for the jam version 2 of Generation - Sentinel Expedition 
+#Theme: Survive
 
 🕹️🕹️🕹️ Our Team 🕹️🕹️🕹️
 
