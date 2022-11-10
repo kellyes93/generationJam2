@@ -9,7 +9,7 @@
 
 - 💻 Kelly Johanna Escobar Castaño - UsuarioGitHub: kellyes93
 
-- 💻 Juan Pablo Sanchez Frasser - UsuarioGitHub:
+- 💻 Juan Pablo Sanchez Frasser - UsuarioGitHub: frasser
 
 - 💻 Julian David Bonilla Farfán - UsuarioGitHub: JulianDBonillaF
 
