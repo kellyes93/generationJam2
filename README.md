@@ -11,7 +11,7 @@
 
 - 💻 Juan Pablo Sanchez Frasser - UsuarioGitHub:
 
-- 💻 Julian David Bonilla Farfán - UsuarioGitHub:
+- 💻 Julian David Bonilla Farfán - UsuarioGitHub: JulianBonilla
 
 
 ### Made with 🛠 
