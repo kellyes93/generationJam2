@@ -2,15 +2,16 @@
 
 🕹️🕹️🕹️ Generation Jam - version 2 🕹️🕹️🕹️
 
-# Welcome to the video game for the jam version 2 of Generation - Theme: Survive
+# Welcome to the video game for the jam version 2 of Generation - Sentinel Expedition 
+# Theme: Survive
 
 🕹️🕹️🕹️ Our Team 🕹️🕹️🕹️
 
 - 💻 Kelly Johanna Escobar Castaño - UsuarioGitHub: kellyes93
 
-- 💻 Juan Pablo Sanchez Frasser - UsuarioGitHub:
+- 💻 Juan Pablo Sanchez Frasser - UsuarioGitHub: frasser
 
-- 💻 Julian David Bonilla Farfán - UsuarioGitHub:
+- 💻 Julian David Bonilla Farfán - UsuarioGitHub: JulianDBonillaF
 
 hello team************\*\*\*\*************
 
