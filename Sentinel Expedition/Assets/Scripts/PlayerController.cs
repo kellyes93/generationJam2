@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         turn.x += Input.GetAxis("Mouse X") * sensitivity;
         turn.y += Input.GetAxis("Mouse Y") * sensitivity;
 
-        transform.localRotation = Quaternion.Euler(- turn.x,0,0);
+        //transform.localRotation = Quaternion.Euler(- turn.x,0,0);
         // translada de derecha o izquierda de acuerdo al valor almacenado en move.
 
         /* if(Input.GetKeyDown("Jump"){
