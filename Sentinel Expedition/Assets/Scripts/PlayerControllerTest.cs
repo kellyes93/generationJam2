@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+/*public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
@@ -19,4 +19,4 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(Vector2.right *Time.deltaTime * speed * forwardInput);
     }
-}
+}*/
