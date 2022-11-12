@@ -19,7 +19,6 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         //SetEnemyValues();
-        //
     }
 
     // Update is called once per frame
