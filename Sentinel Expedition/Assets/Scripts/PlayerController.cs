@@ -5,8 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    private float move;
-    private float movey;
+    public float move;
+    public float movey;
+    public float xRange = 8.0f;
+    public float yRange = 3.0f;
+    public GameObject bulletRocks;
+    public Transform spawnRockPosition;
     //private Rigidbody2D rigidPlayer;
     //public float force;
     /*Mouse follow*/
@@ -26,13 +30,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        move = Input.GetAxis("Horizontal");
+        StopLimit();
+        ShootPlayer();
+
+        move = Input.GetAxis("Horizontal") * speed;
         animator.SetFloat("Horizontal",move);
         //mismo valor del axis horizontal lo guarda de acuerdo al imput
-        movey = Input.GetAxis("Vertical");
+        movey = Input.GetAxis("Vertical") * speed;
         animator.SetFloat("Vertical",movey);
-        transform.Translate(move * speed, 0, 0);
-        transform.Translate(0, movey * speed, 0);
+        transform.Translate(move * Time.deltaTime, 0, 0);
+        transform.Translate(0, movey * Time.deltaTime, 0);
 
 
         turn.x += Input.GetAxis("Mouse X") * sensitivity;
@@ -45,6 +52,37 @@ public class PlayerController : MonoBehaviour
              //Debug.Log("ENTRO");
              rigidPlayer.AddForce(Vector2.up * force, ForceMode.Impulse); //añade una fuerza hacia arriba
          }*/
+    }
+
+    void StopLimit ()
+    {
+        if (transform.position.x < -xRange)
+        {
+            transform.position = new Vector2 (-xRange, transform.position.y);
+        }
+
+        if (transform.position.x > xRange)
+        {
+            transform.position = new Vector2 (xRange, transform.position.y);
+        }
+
+        if (transform.position.y < -yRange)
+        {
+            transform.position = new Vector2 (transform.position.x, -yRange);
+        }
+
+        if (transform.position.y > yRange)
+        {
+            transform.position = new Vector2 (transform.position.x, yRange);
+        }
+    }
+
+    void ShootPlayer ()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Instantiate(bulletRocks, spawnRockPosition.position, bulletRocks.transform.rotation);
+            }
     }
 
     /*private void Awake() {

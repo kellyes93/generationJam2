@@ -9,11 +9,17 @@ public class FollowThePlayer : MonoBehaviour
     [SerializeField] Transform playerTransform;
     Rigidbody2D myRB;
     Transform target;
+    [Header("Animation")]
+    private Animator animator;
+    private PlayerController playerController;
+
     // Start is called before the first frame update
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        animator = GetComponent<Animator>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
     }
 
@@ -22,6 +28,8 @@ public class FollowThePlayer : MonoBehaviour
     {
         TargetFollow ();
         FlipSprite ();
+        animator.SetFloat("Horizontal", Mathf.Abs(playerController.move));
+        animator.SetFloat("Vertical", Mathf.Abs(playerController.movey));
     }
 
     void TargetFollow ()
