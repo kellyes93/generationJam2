@@ -891,6 +891,7 @@ GameObject:
   - component: {fileID: 441282389}
   - component: {fileID: 441282391}
   - component: {fileID: 441282390}
+  - component: {fileID: 441282392}
   m_Layer: 5
   m_Name: TextCounter
   m_TagString: Untagged
@@ -938,7 +939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: score
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -965,7 +966,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
+  m_fontSize: 26
   m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1001,7 +1002,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 109.19464, w: 0}
+  m_margin: {x: -35.075256, y: 0, z: 77.513756, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1015,6 +1016,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441282388}
   m_CullTransparentMesh: 1
+--- !u!114 &441282392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441282388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547ca9b80f0a3843bc3a76c1ab391a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 1
+  textScorePro: {fileID: 441282390}
 --- !u!1 &480954793
 GameObject:
   m_ObjectHideFlags: 0
