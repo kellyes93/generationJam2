@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject[] enemyPrefabs;
-    private float startDelay = 2;
-    private float spawnDelay = 0.5f;
+    public GameObject enemyPrefab;
     public int numberEnemy;
+    public int numberAttack = 1;
     // Start is called before the first frame update
     void Start()
     {
-        rightSpawn(3);
+        rightSpawn(numberAttack);
     }
 
     // Update is called once per frame
     void Update()
     {
-        numberEnemy = FindObjectsOfType<EnemyMove>().Length;
+        numberEnemy = FindObjectsOfType<Enemy>().Length;
         if (numberEnemy == 0)
         {
-            rightSpawn(3);
+            numberAttack++;
+            rightSpawn(numberAttack);
         }
     }
 
@@ -28,10 +28,9 @@ public class SpawnManager : MonoBehaviour
     {
         for(int i = 0; i < enemyAmount; i++)
         {
-            int enemyIndex = Random.Range(0, enemyPrefabs.Length);
-            Vector3 spawnPos = new Vector3(0, 0, 0);
+            Vector3 spawnPos = new Vector3(0, Random.Range(5, -5), 0);
 
-            Instantiate(enemyPrefabs[enemyIndex], spawnPos, enemyPrefabs[enemyIndex].transform.rotation);
+            Instantiate(enemyPrefab, spawnPos, enemyPrefab.transform.rotation);
 
         }
 
