@@ -9,8 +9,7 @@ public class PlayerController : MonoBehaviour
     public float movey;
     public float xRange = 8.0f;
     public float yRange = 3.0f;
-    public GameObject bulletRocks;
-    public Transform spawnRockPosition;
+    private bool lookingRigt = true;
     //private Rigidbody2D rigidPlayer;
     //public float force;
     /*Mouse follow*/
@@ -31,7 +30,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         StopLimit();
-        ShootPlayer();
 
         move = Input.GetAxis("Horizontal") * speed;
         animator.SetFloat("Horizontal",move);
@@ -44,6 +42,17 @@ public class PlayerController : MonoBehaviour
 
         turn.x += Input.GetAxis("Mouse X") * sensitivity;
         turn.y += Input.GetAxis("Mouse Y") * sensitivity;
+
+        if (move > 0 && !lookingRigt)
+        {
+            //Turn
+            //Turn();
+        }
+        else if (move < 0 && lookingRigt)
+        {
+            //Turn
+            //Turn();
+        }
 
         //transform.localRotation = Quaternion.Euler(- turn.x,0,0);
         // translada de derecha o izquierda de acuerdo al valor almacenado en move.
@@ -77,12 +86,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void ShootPlayer ()
+
+    void Turn ()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Instantiate(bulletRocks, spawnRockPosition.position, bulletRocks.transform.rotation);
-            }
+        lookingRigt = !lookingRigt;
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
     }
 
     /*private void Awake() {
