@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        numberEnemy = FindObjectsOfType<Enemy>().Length;
+        numberEnemy = FindObjectsOfType<EnemyFinding1>().Length;
         if (numberEnemy == 0)
         {
             numberAttack++;
