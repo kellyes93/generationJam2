@@ -28,8 +28,8 @@ public class FollowThePlayer : MonoBehaviour
     {
         TargetFollow();
         // FlipSprite ();
-        animator.SetFloat("Horizontal", Mathf.Abs(playerController.move));
-        animator.SetFloat("Vertical", Mathf.Abs(playerController.movey));
+        animator.SetFloat("Horizontal", /*Mathf.Abs*/(playerController.move));
+        animator.SetFloat("Vertical",/* Mathf.Abs*/(playerController.movey));
     }
 
     void TargetFollow()
