@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2078448866255138975}
   m_Layer: 0
   m_Name: bulletRock
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f930b4038357d46aad2910ebc122a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
   damage: 15
 --- !u!58 &1978193731979476275
 CircleCollider2D:

@@ -8,7 +8,7 @@ public class SpawnManager : MonoBehaviour
     public int numberEnemy;
     public int numberAttack = 1;
     public float delayInterval = 0;
-    public float interval = 5;
+    public float interval = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +20,15 @@ public class SpawnManager : MonoBehaviour
     {
         numberEnemy = FindObjectsOfType<EnemyFinding1>().Length;
         if (numberEnemy == 0 && delayInterval < Time.time)
+            {
+                numberAttack++;
+                rightSpawn(numberAttack);
+                delayInterval = Time.time + interval;            
+            }
+        else if (numberEnemy == 3)
         {
-            numberAttack++;
-            rightSpawn(numberAttack);
-            delayInterval = Time.time + interval;
-            
+            Debug.Log("Final");
+            StopAllCoroutines();
         }
     }
 
@@ -32,7 +36,7 @@ public class SpawnManager : MonoBehaviour
     {
         for(int i = 0; i < enemyAmount; i++)
         {
-            Vector3 spawnPos = new Vector3(0, Random.Range(5, -5), 0);
+            Vector3 spawnPos = new Vector3(9, Random.Range(5, -5), 0);
 
             Instantiate(enemyPrefab, spawnPos, enemyPrefab.transform.rotation);
 

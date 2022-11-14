@@ -6,10 +6,11 @@ public class DamageToEnemy : MonoBehaviour
 {
     public float life;
     public GameObject diedEffect;
+    public ScorePoints score;
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = GameObject.FindGameObjectWithTag("Player").GetComponent<ScorePoints>();
     }
 
     // Update is called once per frame
@@ -25,11 +26,12 @@ public class DamageToEnemy : MonoBehaviour
         {
             Died();
         }
+        
     }
 
     private void Died()
     {
         Instantiate(diedEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        Destroy(gameObject);    
     }
 }
