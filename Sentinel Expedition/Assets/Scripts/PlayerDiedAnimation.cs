@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFinding1 : MonoBehaviour
+public class PlayerDiedAnimation : MonoBehaviour
 {
-    public float life;
+    public float pointsLifePlayer;
     public GameObject diedEffect;
     // Start is called before the first frame update
     void Start()
@@ -20,8 +20,8 @@ public class EnemyFinding1 : MonoBehaviour
 
     public void TakeDamage (float damage)
     {
-        life -= damage;
-        if (life <= 0)
+        pointsLifePlayer -= damage;
+        if (pointsLifePlayer <= 0)
         {
             Died();
         }
