@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class BulletMoveForward : MonoBehaviour
 {
-    
+
     public float damage;
+    public ScorePoints score;
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = GameObject.FindGameObjectWithTag("Player").GetComponent<ScorePoints>();
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class BulletMoveForward : MonoBehaviour
         {
             other.GetComponent<EnemyFinding1>().TakeDamage(damage);
             Destroy(this.gameObject);
+            score.score ++;
         }   
     }
 }
