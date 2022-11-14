@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float move;
     public float movey;
-    public float xRange = 8.0f;
-    public float yRange = 3.0f;
+    private float xRange = 8.0f;
+    private float yRange = 3.0f;
     private bool lookingRigt = true;
     //private Rigidbody2D rigidPlayer;
     //public float force;

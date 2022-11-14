@@ -7,6 +7,8 @@ public class SpawnManager : MonoBehaviour
     public GameObject enemyPrefab;
     public int numberEnemy;
     public int numberAttack = 1;
+    public float delayInterval = 0;
+    public float interval = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +19,12 @@ public class SpawnManager : MonoBehaviour
     void Update()
     {
         numberEnemy = FindObjectsOfType<EnemyFinding1>().Length;
-        if (numberEnemy == 0)
+        if (numberEnemy == 0 && delayInterval < Time.time)
         {
             numberAttack++;
             rightSpawn(numberAttack);
+            delayInterval = Time.time + interval;
+            
         }
     }
 
@@ -35,4 +39,5 @@ public class SpawnManager : MonoBehaviour
         }
 
     }
+
 }
