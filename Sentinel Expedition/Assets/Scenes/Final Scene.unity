@@ -1477,7 +1477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   targetPosition: 1
-  playerTransform: {fileID: 1572889598}
+  playerTransform: {fileID: 0}
 --- !u!1 &1394361327
 GameObject:
   m_ObjectHideFlags: 0

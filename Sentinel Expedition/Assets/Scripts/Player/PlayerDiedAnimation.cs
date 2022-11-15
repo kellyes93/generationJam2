@@ -8,6 +8,7 @@ public class PlayerDiedAnimation : MonoBehaviour
     public event EventHandler overHandler;
     public float pointsLifePlayer;
     public GameObject diedEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class PlayerDiedAnimation : MonoBehaviour
         {
             overHandler?.Invoke(this, EventArgs.Empty);
             Died();
+            
         }
     }
 
@@ -35,7 +37,7 @@ public class PlayerDiedAnimation : MonoBehaviour
     {
         //When the life of the player is 0. animation of dead start
         Instantiate(diedEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
 }

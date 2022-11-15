@@ -13,6 +13,7 @@ public class FollowThePlayer : MonoBehaviour
     private Animator animator;
     private PlayerController playerController;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +40,7 @@ public class FollowThePlayer : MonoBehaviour
         if (Vector2.Distance(transform.position, target.position) > targetPosition)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        }    
+        }
 
     }
     
