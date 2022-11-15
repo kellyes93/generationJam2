@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    public float speed;
+    public int speed;
     public float checkRadius;
     public float attackRadius;
 
@@ -66,6 +66,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void MoveCharacter(Vector2 dir)
     {
+        speed = (Random.Range(1, 4));
         //rb.MovePosition((Vector2)transform.position + (dir * speed * Time.deltaTime));
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
        // transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);

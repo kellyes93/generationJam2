@@ -43,7 +43,7 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < enemyAmount; i++)
         {
-            Vector3 spawnPos = new Vector3(9, Random.Range(5, -5), 0);
+            Vector3 spawnPos = new Vector3(9, Random.Range(5, -5), 0); 
             Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
             Instantiate(enemyPrefab, _sp.position, _sp.rotation);
 
