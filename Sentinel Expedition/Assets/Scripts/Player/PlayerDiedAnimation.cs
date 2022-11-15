@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerDiedAnimation : MonoBehaviour
 {
     public float pointsLifePlayer;
-    public GameObject diedEffect;
+    public GameObject diedEffect; 
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +31,6 @@ public class PlayerDiedAnimation : MonoBehaviour
     {
         Instantiate(diedEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
-    }
+    }  
+
 }

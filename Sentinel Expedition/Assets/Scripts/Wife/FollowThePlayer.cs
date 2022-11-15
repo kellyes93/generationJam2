@@ -27,9 +27,8 @@ public class FollowThePlayer : MonoBehaviour
     void Update()
     {
         TargetFollow();
-        // FlipSprite ();
-        animator.SetFloat("Horizontal", /*Mathf.Abs*/(playerController.move));
-        animator.SetFloat("Vertical",/* Mathf.Abs*/(playerController.movey));
+        animator.SetFloat("Horizontal", (playerController.move));
+        animator.SetFloat("Vertical", (playerController.moveY));
     }
 
     void TargetFollow()
@@ -38,22 +37,8 @@ public class FollowThePlayer : MonoBehaviour
         if (Vector2.Distance(transform.position, target.position) > targetPosition)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        }
-        
+        }    
 
     }
-
-    void FlipSprite()
-    {
-        if (playerTransform.position.x > transform.position.x)
-        {
-            //Turn face right
-            transform.localScale = new Vector3(1, 1, 1);
-        }
-        else if (playerTransform.position.x < transform.position.x)
-        {
-            //Turn face left
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-    }
+    
 }

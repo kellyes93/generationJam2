@@ -9,6 +9,7 @@ public class SpawnManager : MonoBehaviour
     public int numberAttack = 1;
     public float delayInterval = 0;
     public float interval = 10;
+    public bool starSpawn = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +20,16 @@ public class SpawnManager : MonoBehaviour
     void Update()
     {
         numberEnemy = FindObjectsOfType<EnemyFinding1>().Length;
-        if (numberEnemy == 0 && delayInterval < Time.time)
+        if (numberEnemy == 0 && delayInterval < Time.time && starSpawn == true)
             {
                 numberAttack++;
                 rightSpawn(numberAttack);
                 delayInterval = Time.time + interval;            
             }
-        else if (numberEnemy == 3)
+        else if (numberEnemy == 8)
         {
             Debug.Log("Final");
-            StopAllCoroutines();
+            starSpawn = false;
         }
     }
 

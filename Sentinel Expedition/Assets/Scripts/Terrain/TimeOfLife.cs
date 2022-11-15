@@ -11,7 +11,7 @@ public class TimeOfLife : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       clip.Play(); 
+        clip.Play(); 
         Destroy(gameObject, timeOfLife);
        
     }
