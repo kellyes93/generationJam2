@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class SpawnManager : MonoBehaviour
 {
@@ -22,24 +24,27 @@ public class SpawnManager : MonoBehaviour
     {
         numberEnemy = FindObjectsOfType<EnemyFinding1>().Length;
         if (numberEnemy == 0 && delayInterval < Time.time && starSpawn == true)
-            {
-                numberAttack++;
-                rightSpawn(numberAttack);
-                delayInterval = Time.time + interval;            
-            }
-        else if (numberEnemy == 8)
         {
-            Debug.Log("Final");
+            numberAttack++;
+            rightSpawn(numberAttack);
+            delayInterval = Time.time + interval;
+        }
+        else if (numberEnemy == 9)
+        {
+
+            SceneManager.LoadScene("Final");
             starSpawn = false;
+
+
         }
     }
 
     void rightSpawn(int enemyAmount)
     {
-        for(int i = 0; i < enemyAmount; i++)
+        for (int i = 0; i < enemyAmount; i++)
         {
             Vector3 spawnPos = new Vector3(9, Random.Range(5, -5), 0);
-            Transform _sp = spawnPoints[ Random.Range (0, spawnPoints.Length) ];
+            Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
             Instantiate(enemyPrefab, _sp.position, _sp.rotation);
 
         }
