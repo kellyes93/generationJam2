@@ -5,23 +5,24 @@ using TMPro;
 
 public class ScoreCounterView : MonoBehaviour
 {
-    public float score = 0;
+    // public float score = 0;
+    public ScorePoints currentScore;
     public TextMeshProUGUI textScorePro;
     // Start is called before the first frame update
     void Start()
     {
-
+        currentScore = GameObject.FindGameObjectWithTag("Player").GetComponent<ScorePoints>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        score += 1 * Time.deltaTime;
-        textScorePro.text = "score: " + score.ToString("f0");
+        //score += 1 * Time.deltaTime;
+        textScorePro.text = "score: " + currentScore.score.ToString("f0");
 
-        if (score <= 0)
+        if (currentScore.score <= 0)
         {
-            textScorePro.text = "score";
+            textScorePro.text = "score : 0";
         }
 
     }
