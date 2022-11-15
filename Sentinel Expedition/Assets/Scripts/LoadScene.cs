@@ -18,7 +18,7 @@ public class LoadScene : MonoBehaviour
     // Start is called before the first frame update
     public void LoadLevel(string nameLevel)
     {
-        Debug.Log("entro");
+        
         clip.Play();
         SceneManager.LoadScene(nameLevel);
     }
