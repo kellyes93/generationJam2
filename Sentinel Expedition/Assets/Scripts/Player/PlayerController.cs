@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Method to Animate and move the player
         StopLimit();
 
         move = Input.GetAxis("Horizontal");
@@ -36,6 +37,8 @@ public class PlayerController : MonoBehaviour
 
     void StopLimit ()
     {
+        //Conditions to prevent the player from leaving the map
+
         if (transform.position.x < -xRange)
         {
             transform.position = new Vector2 (-xRange, transform.position.y);

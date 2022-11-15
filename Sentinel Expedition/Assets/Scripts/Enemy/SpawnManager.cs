@@ -22,14 +22,16 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Method to increase an enemy in each wave, time between waves and stop waves
         numberEnemy = FindObjectsOfType<EnemyFinding1>().Length;
         if (numberEnemy == 0 && delayInterval < Time.time && starSpawn == true)
         {
+            delayInterval = Time.time + interval;
             numberAttack++;
             rightSpawn(numberAttack);
-            delayInterval = Time.time + interval;
+            
         }
-        else if (numberEnemy == 9)
+        else if (numberEnemy == 11)
         {
 
             SceneManager.LoadScene("Final");
@@ -41,6 +43,7 @@ public class SpawnManager : MonoBehaviour
 
     void rightSpawn(int enemyAmount)
     {
+        //This allows to create random positions in the map
         for (int i = 0; i < enemyAmount; i++)
         {
             Vector3 spawnPos = new Vector3(9, Random.Range(5, -5), 0); 

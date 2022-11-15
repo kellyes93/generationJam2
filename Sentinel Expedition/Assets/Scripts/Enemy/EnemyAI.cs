@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    public int speed;
+    public float speed;
     public float checkRadius;
     public float attackRadius;
 
@@ -34,6 +34,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
+        //Animations enemys
         anim.SetBool("isWalking", isInChaseRange);
 
         isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsPlayer);
@@ -55,6 +56,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        //Conditions to start move
         if(isInChaseRange && !isInAttackRange)
         {
             MoveCharacter(movement);
@@ -66,10 +68,9 @@ public class EnemyAI : MonoBehaviour
     }
     private void MoveCharacter(Vector2 dir)
     {
-        speed = (Random.Range(1, 4));
-        //rb.MovePosition((Vector2)transform.position + (dir * speed * Time.deltaTime));
+        //Velocity and direction Enemys
+        speed = (Random.Range(0.5f, 2.3f));
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-       // transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
     }
 
 }

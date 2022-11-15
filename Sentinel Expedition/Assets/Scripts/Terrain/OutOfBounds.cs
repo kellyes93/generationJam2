@@ -14,6 +14,7 @@ public class OutOfBounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //When the bullet crosses the limit it is destroyed 
         if (transform.position.x > limit)
         {
             Destroy(gameObject);

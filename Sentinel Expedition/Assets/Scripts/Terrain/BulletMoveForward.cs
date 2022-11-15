@@ -13,6 +13,7 @@ public class BulletMoveForward : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Allows you to see the number of points the player makes with each shot
         score = GameObject.FindGameObjectWithTag("Player").GetComponent<ScorePoints>();
         
         clip.Play();
@@ -27,6 +28,7 @@ public class BulletMoveForward : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
+        //If the rock hits the enemy, knock them. 
         
         if(other.CompareTag("Enemy"))
         {

@@ -22,6 +22,7 @@ public class PlayerDiedAnimation : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        //This active the died animation and the canvas to retry or goint to the menu
         pointsLifePlayer -= damage;
         if (pointsLifePlayer <= 0)
         {
@@ -32,6 +33,7 @@ public class PlayerDiedAnimation : MonoBehaviour
 
     private void Died()
     {
+        //When the life of the player is 0. animation of dead start
         Instantiate(diedEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

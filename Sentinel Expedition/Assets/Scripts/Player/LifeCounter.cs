@@ -7,10 +7,7 @@ using UnityEngine.UI;
 public class LifeCounter : MonoBehaviour
 {
 
-    //[SerializeField] private int life = 3;
     public PlayerDiedAnimation life;
-
-    //public TextMeshProUGUI textLifePro;
     public Image statusBar;
     public float maxLife;
     // Start is called before the first frame update
@@ -23,11 +20,12 @@ public class LifeCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Counter life in the HUD
         statusBar.fillAmount = life.pointsLifePlayer / maxLife;
-        //textLifePro.text = life.pointsLifePlayer.ToString("f0");
+
         if (life.pointsLifePlayer <= 0)
         {
-            //LLAMA GAME OVER 
+            //Call GAME OVER 
             Debug.Log("GAME OVER");
 
         }

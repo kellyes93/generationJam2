@@ -23,6 +23,7 @@ public class shootPlayer : MonoBehaviour
 
     void ShootPlayer ()
     {
+        //When player press Space can shoot the rocks
         if (Input.GetKeyDown(KeyCode.Space) && !isShooting)
             {
                 StartCoroutine(Shoot());

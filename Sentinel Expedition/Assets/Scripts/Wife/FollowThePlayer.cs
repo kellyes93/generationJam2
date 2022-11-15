@@ -26,6 +26,7 @@ public class FollowThePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Animations to the Player's wife
         TargetFollow();
         animator.SetFloat("Horizontal", (playerController.move));
         animator.SetFloat("Vertical", (playerController.moveY));
@@ -33,6 +34,7 @@ public class FollowThePlayer : MonoBehaviour
 
     void TargetFollow()
     {
+        //Choose a object and start to follow, giving its own speed and distance
         
         if (Vector2.Distance(transform.position, target.position) > targetPosition)
         {

@@ -21,6 +21,7 @@ public class DamageToEnemy : MonoBehaviour
 
     public void TakeDamage (float damage)
     {
+        //Method to knock de enemy
         life -= damage;
         if (life <= 0)
         {

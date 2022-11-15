@@ -18,6 +18,7 @@ public class EnemyDamageToPlayer : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other) 
     {
+        //Condition to hurt de Player
         if(other.CompareTag("Player"))
         {
             other.GetComponent<PlayerDiedAnimation>().TakeDamage(damage);

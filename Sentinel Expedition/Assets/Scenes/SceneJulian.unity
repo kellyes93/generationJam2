@@ -155,6 +155,10 @@ MonoBehaviour:
   enemyPrefab: {fileID: 0}
   numberEnemy: 0
   numberAttack: 1
+  delayInterval: 0
+  interval: 10
+  starSpawn: 1
+  spawnPoints: []
 --- !u!4 &106868451
 Transform:
   m_ObjectHideFlags: 0
@@ -571,6 +575,10 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4656460465665529353, guid: 8261e1f1ab64d6446ad64a9a244c57a8, type: 3}
   numberEnemy: 0
   numberAttack: 1
+  delayInterval: 0
+  interval: 10
+  starSpawn: 1
+  spawnPoints: []
 --- !u!4 &795543911
 Transform:
   m_ObjectHideFlags: 0
@@ -753,6 +761,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletRocks: {fileID: 6907583102481203764, guid: 8f5ec9f54ff6a674cbc869799b7f4e2f, type: 3}
   spawnRockPosition: {fileID: 157741121}
+  speed: 0
+  shootTimer: 0
 --- !u!114 &1976756863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,9 +777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   move: 0
-  movey: 0
-  turn: {x: 0, y: 0, z: 0}
-  sensitivity: 0.5
+  moveY: 0
 --- !u!212 &1976756864
 SpriteRenderer:
   m_ObjectHideFlags: 0

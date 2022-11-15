@@ -21,6 +21,7 @@ public class KillPlayer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
+        //Condition to take damage and died if the enemt touch the player
         if(other.gameObject.CompareTag("Player"))
         {
             player.transform.position = respawnPoint.position;
