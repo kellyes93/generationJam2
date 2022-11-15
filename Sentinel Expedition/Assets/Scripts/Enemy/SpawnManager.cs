@@ -10,6 +10,7 @@ public class SpawnManager : MonoBehaviour
     public float delayInterval = 0;
     public float interval = 10;
     public bool starSpawn = true;
+    public Transform[] spawnPoints;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,8 +39,8 @@ public class SpawnManager : MonoBehaviour
         for(int i = 0; i < enemyAmount; i++)
         {
             Vector3 spawnPos = new Vector3(9, Random.Range(5, -5), 0);
-
-            Instantiate(enemyPrefab, spawnPos, enemyPrefab.transform.rotation);
+            Transform _sp = spawnPoints[ Random.Range (0, spawnPoints.Length) ];
+            Instantiate(enemyPrefab, _sp.position, _sp.rotation);
 
         }
 

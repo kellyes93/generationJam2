@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         move = Input.GetAxis("Horizontal");
         animator.SetFloat("Horizontal", move);
 
-        //mismo valor del axis horizontal lo guarda de acuerdo al imput
+        //Same value on Horizontal Axis
         moveY = Input.GetAxis("Vertical");
         animator.SetFloat("Vertical", moveY);
         transform.Translate(Vector2.right * move * Time.deltaTime * speed);
