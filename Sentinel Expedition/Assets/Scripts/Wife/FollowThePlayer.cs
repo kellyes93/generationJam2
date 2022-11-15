@@ -34,10 +34,13 @@ public class FollowThePlayer : MonoBehaviour
 
     void TargetFollow()
     {
+        
         if (Vector2.Distance(transform.position, target.position) > targetPosition)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
+        
+
     }
 
     void FlipSprite()

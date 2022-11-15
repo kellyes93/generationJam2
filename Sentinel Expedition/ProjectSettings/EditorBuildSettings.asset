@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneJulian.unity
     guid: 64440b0e307388d4cb9dcb2d78f93d36
+  - enabled: 1
+    path: Assets/Scenes/Final Scene.unity
+    guid: b1fa96e717286b44d9eeea895c719f17
   m_configObjects: {}

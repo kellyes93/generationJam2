@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 using UnityEngine;
+
 
 public class EnemyAI : MonoBehaviour
 {
@@ -19,12 +21,14 @@ public class EnemyAI : MonoBehaviour
 
     private bool isInChaseRange;
     private bool isInAttackRange;
+    public AudioSource clip;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
+        clip.Play();
 
     }
 

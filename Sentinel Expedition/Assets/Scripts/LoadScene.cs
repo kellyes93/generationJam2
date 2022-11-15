@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class LoadScene : MonoBehaviour
 {
+    public AudioSource clip;
     void Start()
     {
 
@@ -17,6 +19,7 @@ public class LoadScene : MonoBehaviour
     public void LoadLevel(string nameLevel)
     {
         Debug.Log("entro");
+        clip.Play();
         SceneManager.LoadScene(nameLevel);
     }
 
